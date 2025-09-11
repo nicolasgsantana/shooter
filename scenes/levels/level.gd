@@ -1,17 +1,12 @@
 extends Node2D
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+func _on_gate_player_entered_gate(body: Node2D) -> void:
+	print("player entered gate")
+	print(body)
 
 
-func _on_area_2d_body_entered(_body: Node2D) -> void:
-	print("Body has entered")
+func _on_player_granade_launched() -> void:
+	print("Laser shoot from level")
 
-
-func _on_area_2d_body_exited(_body: Node2D) -> void:
-	print("Body has exited")
+func _on_player_laser_shot() -> void:
+	print("Granade launch from level")
