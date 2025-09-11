@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1vwttocpn5eo"]
+[gd_scene load_steps=5 format=3 uid="uid://b1vwttocpn5eo"]
 
 [ext_resource type="Texture2D" uid="uid://cdndn0ar21iu6" path="res://resources/graphics/objects/bed.png" id="1_5cltx"]
 [ext_resource type="Texture2D" uid="uid://be34iailaln82" path="res://resources/graphics/objects/pillow_small.png" id="2_skytc"]
 [ext_resource type="Texture2D" uid="uid://osg5oc37cmo8" path="res://resources/graphics/objects/pillow_large.png" id="3_wmpy4"]
 
-[node name="Bed" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5cltx"]
+size = Vector2(629, 365)
+
+[node name="Bed" type="StaticBody2D"]
 
 [node name="BedImg" type="Sprite2D" parent="."]
 texture = ExtResource("1_5cltx")
@@ -17,3 +20,7 @@ texture = ExtResource("2_skytc")
 position = Vector2(232, 2)
 rotation = -3.14159
 texture = ExtResource("3_wmpy4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_5cltx")
