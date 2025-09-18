@@ -17,4 +17,5 @@ func _on_player_laser_shot(pos: Vector2, dir: float) -> void:
 	var laser: Area2D = laser_scene.instantiate() as Area2D
 	laser.position = pos
 	laser.rotation = dir
+	laser.direction = Vector2.from_angle(dir)
 	$Projectiles.add_child(laser)
